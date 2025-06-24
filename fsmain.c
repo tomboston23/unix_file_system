@@ -434,7 +434,7 @@ int subroutine(FILE * f, int i, char ** b){
             }
             break;
         case MKDIR:
-            if (size != 2 || !strlen(b[1])){
+            if (size != 2){
                 printf("Invalid input arguments!\n");
                 break;
             }
@@ -446,7 +446,7 @@ int subroutine(FILE * f, int i, char ** b){
             }
             break;
         case TOUCH:
-            if (size != 2 || !strlen(b[1])){
+            if (size != 2){
                 printf("Invalid input arguments!\n");
                 break;
             }
@@ -458,7 +458,7 @@ int subroutine(FILE * f, int i, char ** b){
             }
             break;
         case READ:
-            if (size != 2 || !strlen(b[1])){
+            if (size != 2){
                 printf("Invalid input arguments!\n");
                 break;
             }
@@ -466,14 +466,14 @@ int subroutine(FILE * f, int i, char ** b){
 
             break;
         case WRITE:
-            if (size != 2 || !strlen(b[1])){
+            if (size != 2){
                 printf("Invalid input arguments!\n");
                 break;
             }
             read_write(f, true, b[1]);
             break;
         case RM:
-            if (size != 2 || !strlen(b[1])){
+            if (size != 2){
                 printf("Invalid input arguments!\n");
                 break;
             }
@@ -509,7 +509,7 @@ int main(){
 
     printf("\nEnter your command - type h for help:\n");
 
-    char commands[][7] = {"h", "cd", "mkdir", "touch", "read", "write", "rm", "ls", "q"};
+    char commands[][6] = {"h", "cd", "mkdir", "touch", "read", "write", "rm", "ls", "q"};
 
 
     while(true){

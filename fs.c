@@ -18,7 +18,7 @@ void mkfs(FILE * f){
     uint32_t ret = alloc_inode(f, true);
     if(!ret) return;
     // printf("directory allocated at: %u\n", ret);
-    char name[64] = "home";
+    char name[64] = "";
     set_inode_name(f, ret, name);
     change_cur_inode(f, ret);
 }

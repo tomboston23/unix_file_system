@@ -527,7 +527,8 @@ int main(){
         // printf("finished while loop\n");
         char pathname[NAME_SIZE] = {0};
         printf("\033[34m");
-        for(int j = i; j >= 0; j--){
+        if (i == 0) printf("~");
+        for(int j = i-1; j >= 0; j--){
             uint32_t num = path[j];
             get_inode_name(file, num, pathname);
             printf("/%s", pathname);

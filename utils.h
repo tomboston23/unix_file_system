@@ -10,7 +10,7 @@
 #define FILE_SIZE 1048576
 #define SUPERBLOCK_OFFSET 0
 #define INODE_SIZE sizeof(struct inode)
-#define INODE_OFFSET 64 //allow first 64 bits to be empty
+#define INODE_OFFSET 8 //allow first 64 bits to be empty
 #define NUM_INODES BLOCK_SIZE / INODE_SIZE
 #define NUM_DATABLOCKS FILE_SIZE / BLOCK_SIZE
 #define INODE_LIST_SIZE NUM_INODES / 8
